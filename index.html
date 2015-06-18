@@ -5,8 +5,10 @@
     <link type="text/css" rel="stylesheet" href="style.css" />
     <title>Challenge Angular</title>
 </head>
-<body ng-app="myApp" ng-controller="myCtrl">
-    
+<body ng-app="myApp" ng-controller="myCtrl" ng-init="ajax()">
+<div ng-repeat ="topic in latest.topic_list.topics"> 
+<div ng-click="show(topic.id)">{{topic.fancy_title}}</div> 
+</div>    
     
 <script src="angular.min.js"></script>
 <script src="script.js"></script>
